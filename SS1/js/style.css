@@ -1,0 +1,45 @@
+#troll {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#question {
+    height: 300px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#answers {
+    display: flex;
+    justify-content: space-between;
+}
+
+#answers > div {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#yes {
+    background-color: red;
+    color: white;
+}
+
+#no {
+    background-color: green;
+    color: white;
+}
+
+.revert {
+    flex-direction: row-reverse;
+}
