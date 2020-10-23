@@ -1,5 +1,5 @@
 let n = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let x = Number(prompt('Nhập vào số bất kì'));
+let input = Number(prompt('Nhập vào số bất kì'));
 let i;
 let j;
 let k;
