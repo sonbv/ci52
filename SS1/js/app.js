@@ -8,6 +8,7 @@
 //     if (n[i] % 2 == 0) {
 
 //     }
+
 //     let y = n[i]
 //     i += 2
 //     console.log(y);

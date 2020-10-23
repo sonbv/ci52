@@ -156,3 +156,16 @@ constructor(name, age, sex, slogan, poor) {
 
 let long = new GoodBoy ('Long', 20, 'nam', 'Em ăn cơm chưa?', 'rớt mồng tơi')
 console.log(long);
+
+class BigCityBoy extends Person {
+    rich;
+    constructor(name, age, sex, slogan, rich) {
+        super(name, age, sex, slogan);
+        this.rich = rich;
+    }
+}
+
+// hãy cài đặt các class sau:
+
+// Person
+// 
