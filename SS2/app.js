@@ -111,61 +111,111 @@
 // console.log(milk);
 
 
-// let long = new Person();
+// // let long = new Person();
 
-// long.name = "Long";
-// long.age = 20;
-// long.address = "Hà Nội";
-// long.sex = "nam";
-// long.status = true;
+// // long.name = "Long";
+// // long.age = 20;
+// // long.address = "Hà Nội";
+// // long.sex = "nam";
+// // long.status = true;
+// // console.log(long);
+
+// // let vinh = new Person();
+// // vinh.name = "Vinh";
+// // vinh.age = 21;
+// // vinh.address = "Hà Nội";
+// // vinh.sex = "nam";
+// // vinh.status = true;
+// // console.log(vinh);
+
+
+// // kế thừa
+
+// class Person {
+//     name;
+//     age;
+//     sex;
+//     slogan;
+
+//     constructor(name, age, sex, slogan) {
+//         this.name = name;
+//         this.age = age;
+//         this.sex = sex;
+//         this.slogan = slogan;
+//     }
+// }
+
+// class GoodBoy extends Person {
+//     poor;
+// constructor(name, age, sex, slogan, poor) {
+//     super(name, age, sex, slogan);
+//     // bắt buộc phải có, dùng để gọi phương thức ở class cha để sử dụng, cách dùng tương tự callback
+//     this.poor = poor;
+// }
+// }
+
+// let long = new GoodBoy ('Long', 20, 'nam', 'Em ăn cơm chưa?', 'rớt mồng tơi')
 // console.log(long);
 
-// let vinh = new Person();
-// vinh.name = "Vinh";
-// vinh.age = 21;
-// vinh.address = "Hà Nội";
-// vinh.sex = "nam";
-// vinh.status = true;
-// console.log(vinh);
-
-
-// kế thừa
-
-class Person {
-    name;
-    age;
-    sex;
-    slogan;
-
-    constructor(name, age, sex, slogan) {
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-        this.slogan = slogan;
-    }
-}
-
-class GoodBoy extends Person {
-    poor;
-constructor(name, age, sex, slogan, poor) {
-    super(name, age, sex, slogan);
-    // bắt buộc phải có, dùng để gọi phương thức ở class cha để sử dụng, cách dùng tương tự callback
-    this.poor = poor;
-}
-}
-
-let long = new GoodBoy ('Long', 20, 'nam', 'Em ăn cơm chưa?', 'rớt mồng tơi')
-console.log(long);
-
-class BigCityBoy extends Person {
-    rich;
-    constructor(name, age, sex, slogan, rich) {
-        super(name, age, sex, slogan);
-        this.rich = rich;
-    }
-}
+// class BigCityBoy extends Person {
+//     rich;
+//     constructor(name, age, sex, slogan, rich) {
+//         super(name, age, sex, slogan);
+//         this.rich = rich;
+//     }
+// }
 
 // hãy cài đặt các class sau:
 
 // Person
 // 
+
+class Person {
+    name;
+    age;
+    address;
+
+    constructor(name, age, address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    speak() {
+
+    }
+}
+
+class Boy extends Person {
+    sex;
+    strength;
+    hit;
+    constructor(name, age, address, strength) {
+        super(name, age, address),
+        this.sex = 'male';
+        this.strength = strength;
+    }
+    hit() {
+
+    }
+}
+
+class Girl extends Person {
+    sex = 'female';
+    beauty;
+    constructor (name, age, address, sex, beauty) {
+        super(name, age, address);
+        this.sex = sex;
+        this.beauty = beauty;
+    }
+    cook() {
+    }
+}
+
+class GoodBoy extends Boy {
+    poor;
+    constructor()
+}
+
+
+// tính đa hình
