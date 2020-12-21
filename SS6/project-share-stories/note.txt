@@ -1,0 +1,52 @@
+- ý tưởng:
+    + tên đề tài: project-share-stories
+    + đối tượng: 18-60
+    + chức năng:
+        # đăng ký
+        # đăng nhập
+        # xem các stories
+        # tạo story
+        # react lại stories của người khác
+- phân tích:
+    + dữ liệu (thực thể):
+        # người dùng user: name, email, password
+        # story: owner, content, datemodified
+        # reaction: reactor, stories, react type
+    + chức năng: xác định chức năng đấy tương tác với người dùng ntn (cần viết chi tiết một chút)
+        # phân tích chức năng đăng ký
+        1. bấm vào link đăng ký -> hiển trang form/trang đăng ký
+        2. người dùng nhập vào: name, email, password, password confirmation ->
+        3. bấm nút đăng ký register -> 
+            nếu nhập đủ đăng ký
+                -> kiểm tra bị trùng thông tin email ko
+                    -> ko có thì tiến hành lưu thông tin người dùng
+                -> nếu trùng thì thông báo thông tin bị trùng
+            nếu ko nhập đủ đăng ký
+                -> in thông báo lỗi
+            nếu password != password confirmation
+                -> in thông báo lỗi
+            
+- Thiết kế:
+    # thiết kế cơ sở dữ liệu
+    # thiết kế cho chức năng đăng ký
+        cơ sở dữ liệu
+        thiết kế giao diện
+    # thiết kế chi tiết chữc năng đăng nhập:
+        thiết kế chi tiết cho chức năng: xác định thuật toán để thực hiện được chức năng đấy
+- Cài đặt
+- Kiểm thử test
+- Triển khai deploy
+
+nguyên tắc: 4 màu,3 font chữ, 3 cỡ chữ
+
+
+# phân tích chức năng đăng nhập
+    1. bấm vào link -> hiển thị form đăng nhập
+    2. người dùng nhập vào: email, password
+    3. người dùng bấm nút "đăng nhập"
+        -> kiểm tra thông tin
+            nếu nhập đủ:
+                kiểm tra email và password
+                    nếu đúng -> chuyển sang trang index
+                    nếu ko đúng -> chuyển trang nhập lại
+            nếu ko nhập đủ: in lỗi

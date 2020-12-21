@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+
+  </head>
+  <body id="mainBody">
+    <register-form></register-form>
+    <input-wrapper
+      label="tên đăng ký"
+      type="text"
+      error="Nhập vào tên đăng ký"
+      value="hahaha"
+    ></input-wrapper>
+    <template id="input-wrapper-template">
+      <div id="input-wrapper">
+        <input type="text" id="input-main" placeholder="Main Input" />
+        <div id="input-error"></div>
+      </div>
+    </template>
+    <template>
+      <template id="register-form-tamplate">
+        <link rel="stylesheet" href="./css/register-form.css"
+        <form id="register-form" action="#">
+          <h2>Đăng ký tài khoản</h2>
+          <input-wrapper id="name" label="Tên đăng ký" type="text"></input-wrapper>
+          <input-wrapper id="email" label="Email" type="email"></input-wrapper>
+          <input-wrapper id="password" label="Mat khau" type="password"></input-wrapper>
+          <input-wrapper id="password-confirmation" label="Xac nhan mat khai" type="password"></input-wrapper>
+          <button id="">Đăng ký</button>
+          <div>Tôi chưa có tài khoản  <a href="#/sign-up">Đăng ký ngay</a></div>
+         
+        </form>
+      </template>
+    </template>
+<template id="login-form-template">
+  <form id ="login-form">
+    <h2>Đăng nhập tài khoản</h2>
+    <input-wrapper id="email" label="Email" type="email"></input-wrapper>
+    <input-wrapper id="password" label="Mật khẩu" type="password"></input-wrapper>
+    <button id="login-button">Đăng nhập</button>
+    <div>Tôi đã có tài khoản  <a href="#/sign-in">Đăng nhập ngay</a></div>
+  </form>
+</template>
+        <template id="story-list-template"> // chỉ để hiển thị các story, còn load story về thì dùng cái khác
+          <div id="story-list">
+            <story-container id="" content="" owner="" date-modified=""></story-container>
+          </div>
+        </template>
+        <template></template>
+    <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyBdrrH4eKEWHKtc4YBb3MhSktpNmFt2C7Y",
+      authDomain: "ci52-project.firebaseapp.com",
+      databaseURL: "https://ci52-project.firebaseio.com",
+      projectId: "ci52-project",
+      storageBucket: "ci52-project.appspot.com",
+      messagingSenderId: "290131383348",
+      appId: "1:290131383348:web:e5f8f1ce583e4957cfe661"
+    };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js" integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A==" crossorigin="anonymous"></script>
+
+<script src="./js/learning.js"></script>
+<script src="//unpkg.com/navigo@6"></script>
+<script src="./js/router.js" type="module"></script>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
